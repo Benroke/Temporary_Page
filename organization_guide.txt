@@ -1,0 +1,21 @@
+HTML Organization:
+- Use semantic HTML elements (nav, section, article) to structure the page.
+- Group related content into sections with descriptive comments (e.g., <!-- Navigation Section -->).
+- Use 5 empty lines between major sections (e.g., after <body>, between </nav> and next section, before </body>) for clear visual separation.
+- Use 2 empty lines between repeated elements within a section (e.g., between review cards) to group them without excessive spacing.
+- Indent nested elements with 4 spaces for readability.
+- Include inline comments for templates or repeated structures (e.g., <!-- Review Card Template -->).
+
+CSS Organization:
+- Start with CSS custom properties (variables) in :root for consistent theming.
+- Group styles by component or section, separated by large comment blocks (e.g., /* ========================= */ /*        NAVIGATION        */ /* ========================= */).
+- Use 3 empty lines between major sections (e.g., after body rules and before NAVIGATION comment, between section comment blocks) to delineate components.
+- Use 1 empty line between related rule sets within a section for logical grouping.
+- Place media queries at the end of the file.
+- Maintain consistent indentation and spacing for all rules.
+
+Whitespace Guidelines:
+- Empty lines are determined by counting blank lines in the source files to ensure consistency and readability.
+- Major structural elements (sections in HTML, component blocks in CSS) get more spacing (5 in HTML, 3 in CSS) to emphasize hierarchy.
+- Related items within a group get minimal spacing (2 in HTML, 1 in CSS) to keep them visually connected.
+- This approach improves code scanning and maintenance by making logical breaks obvious.
