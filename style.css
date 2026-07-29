@@ -4,6 +4,7 @@
     --accent-color: #094e09;
     --accent-text-color: #ffffff;
     --hero-bg-color: #cee1ce;
+    --divider-line-color: #dbdbdb;
 }
 
 
@@ -13,10 +14,6 @@ body {
     background-color: var(--bg-color);
     color: var(--text-color);
 }
-
-
-
-
 
 
 
@@ -103,12 +100,6 @@ body {
     text-decoration: none;
     font-weight: 600;
 }
-
-
-
-
-
-
 
 
 
@@ -220,3 +211,89 @@ body {
     color: var(--accent-color);
     border: 1px solid var(--accent-color);
 }
+
+
+
+/* ========================= */
+/*    QUICK ADVERTISEMENT    */
+/* ========================= */
+
+.quick-advertisement {
+    padding: 0rem 1rem 2rem;
+    background-color: var(--bg-color);
+}
+
+.quick-advertisement-list {
+    display: grid;
+    grid-template-columns: repeat(5, minmax(0, 1fr));
+    align-items: center;
+    max-width: 78rem;
+    margin: 0 auto;
+    padding: 1.2rem 1.4rem;
+    background-color: transparent;
+}
+
+.quick-advertisement-item {
+    position: relative;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 0.95rem;
+    min-width: 0;
+    padding: 0.5rem 1.5rem;
+}
+
+.quick-advertisement-item:not(:last-child)::after {
+    content: '';
+    position: absolute;
+    right: -0.15rem;
+    top: 50%;
+    transform: translateY(-50%);
+    width: 2px;
+    height: 60%;
+    background-color: var(--divider-line-color);
+    border-radius: 10px;
+}
+
+.quick-advertisement-icon {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 2.8rem;
+    height: 2.8rem;
+    flex-shrink: 0;
+    text-decoration: none;
+}
+
+.quick-advertisement-icon img {
+    width: 100%;
+    height: 100%;
+    object-fit: contain;
+}
+
+.quick-advertisement-text {
+    display: flex;
+    flex-direction: column;
+    gap: 0.1rem;
+    font-size: 1rem;
+    font-weight: 800;
+    line-height: 1.15;
+    color: var(--text-color);
+}
+
+@media (max-width: 900px) {
+    .quick-advertisement-list {
+        flex-wrap: wrap;
+        gap: 0.75rem;
+    }
+
+    .quick-advertisement-item {
+        flex-basis: calc(50% - 0.75rem);
+    }
+
+    .quick-advertisement-item:not(:last-child)::after {
+        display: none;
+    }
+}
+
+
