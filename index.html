@@ -1,0 +1,76 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <title>IDK yet</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+
+<body>
+
+
+    <!-- Navigation Section -->
+    <nav class="navbar">
+        <a href="#home" class="brand">
+            <span class="brand-icon" aria-hidden="true">P</span>
+            <span class="brand-text">
+                <strong>Paul's Brand</strong>
+                <small>Quality service, done right</small>
+            </span>
+        </a>
+
+        <div class="nav-links">
+            <a class="nav-link active" href="#home">Home</a>
+            <a class="nav-link" href="#about">About</a>
+            <a class="contact-btn" href="#contact">Contact Us</a>
+        </div>
+    </nav>
+
+    <script>
+        const navLinks = document.querySelectorAll('.nav-link');
+
+        navLinks.forEach(link => {
+            link.addEventListener('click', () => {
+                navLinks.forEach(item => item.classList.remove('active'));
+                link.classList.add('active');
+            });
+        });
+    </script>
+
+
+
+
+    <!-- Hero Section -->
+    <section class="hero">
+        <div class="hero-content">
+            <h1 class="hero-heading">
+                <span class="hero-accent">Smarter</span>
+                <span>Refreshment</span>
+                <span>Solutions</span>
+            </h1>
+
+            <p class="hero-subheading">
+                <span>AI Smart Coolers</span>
+                <span class="hero-separator">&middot;</span>
+                <span>MicroMarkets</span>
+                <span class="hero-separator">&middot;</span>
+                <span>Premium Vending</span>
+            </p>
+
+            <p class="hero-description">
+                Serving businesses throughout Southern Idaho with modern self-service amenities your employees, members, and guests will love.
+            </p>
+
+            <div class="hero-actions">
+                <a class="btn btn-primary" href="#contact">Request A Free Consultation</a>
+                <a class="btn btn-secondary" href="#learn-more">Learn More</a>
+            </div>
+        </div>
+    </section>
+
+
+
+
+</body>
+</html>
