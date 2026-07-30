@@ -5,6 +5,7 @@
     --accent-text-color: #ffffff;
     --hero-bg-color: #cee1ce;
     --divider-line-color: #dbdbdb;
+    --alternate-bg-color: #ececec;
 }
 
 
@@ -392,6 +393,129 @@ body {
 
     .description-content {
         width: 100%;
+    }
+}
+
+
+
+/* ========================= */
+/*       OUR SOLUTIONS       */
+/* ========================= */
+
+.solutions-section {
+    padding: 2rem 2rem 2rem;
+    background-color: var(--alternate-bg-color);
+}
+
+.solutions-header {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    max-width: 76rem;
+    margin: 0 auto 2rem;
+}
+
+.solutions-kicker {
+    display: inline-flex;
+    align-items: center;
+    gap: 1rem;
+    margin: 0;
+    font-size: 0.9rem;
+    font-weight: 800;
+    letter-spacing: 0.16em;
+    text-transform: uppercase;
+    color: var(--accent-color);
+}
+
+.solutions-kicker::before,
+.solutions-kicker::after {
+    content: '';
+    width: 4.5rem;
+    height: 1px;
+    background-color: var(--accent-color);
+}
+
+.solutions-grid {
+    display: grid;
+    grid-template-columns: repeat(3, minmax(0, 1fr));
+    gap: 1.8rem;
+    max-width: 68rem;
+    margin: 0 auto;
+}
+
+.solution-card {
+    display: flex;
+    flex-direction: column;
+    overflow: hidden;
+    background-color: var(--bg-color);
+    border: 1px solid rgba(9, 78, 9, 0.12);
+    border-radius: 1.15rem;
+    box-shadow: 0 10px 22px rgba(9, 78, 9, 0.08);
+    aspect-ratio: 1 / 1;
+    transition: transform 0.2s ease, box-shadow 0.2s ease;
+}
+
+.solution-card:hover {
+    transform: translateY(-8px);
+    box-shadow: 0 16px 30px rgba(9, 78, 9, 0.14);
+}
+
+.solution-media {
+    flex: 0 0 54%;
+    overflow: hidden;
+    background-color: #dfeedd;
+}
+
+.solution-media img {
+    display: block;
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+}
+
+.solution-content {
+    display: flex;
+    flex: 1 1 0;
+    flex-direction: column;
+    justify-content: center;
+    gap: 0.5rem;
+    padding: 1rem 1.1rem;
+}
+
+.solution-title {
+    margin: 0;
+    font-size: 1rem;
+    font-weight: 800;
+    color: var(--accent-color);
+    text-transform: uppercase;
+}
+
+.solution-description {
+    margin: 0;
+    font-size: 0.95rem;
+    line-height: 1.6;
+    color: var(--text-color);
+}
+
+.solution-subheading {
+    margin: 0;
+    font-size: 0.9rem;
+    font-weight: 700;
+    color: var(--accent-color);
+}
+
+@media (max-width: 900px) {
+    .solutions-section {
+        padding: 3rem 1.25rem 4rem;
+    }
+
+    .solutions-grid {
+        grid-template-columns: 1fr;
+    }
+
+    .solution-card {
+        aspect-ratio: auto;
+        min-height: 26rem;
     }
 }
 
