@@ -569,3 +569,107 @@ body {
 /*        FIND INSIDE        */
 /* ========================= */
 
+.find-inside-section {
+    padding: 1rem 2.5rem 2.5rem;
+    background-color: var(--bg-color);
+}
+
+.find-inside-header {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    max-width: 76rem;
+    margin: 0 auto 2rem;
+}
+
+.find-inside-kicker {
+    margin: 0;
+    font-size: 0.9rem;
+    font-weight: 800;
+    letter-spacing: 0.16em;
+    text-transform: uppercase;
+    color: var(--accent-color);
+}
+
+.find-inside-grid {
+    display: grid;
+    grid-template-columns: repeat(4, minmax(0, 1fr));
+    max-width: 76rem;
+    margin: 0 auto;
+    padding: 0 1rem;
+}
+
+.find-inside-column {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 0.9rem;
+    padding: 0 1.2rem;
+    min-width: 0;
+    text-align: center;
+}
+
+.find-inside-column + .find-inside-column {
+    border-left: 1px solid var(--divider-line-color);
+}
+
+.find-inside-icon {
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    width: 2.65rem;
+    height: 2.65rem;
+    margin-bottom: 0.2rem;
+    border-radius: 50%;
+    background-color: var(--accent-color);
+    color: var(--accent-text-color);
+    font-size: 1.2rem;
+    font-weight: 700;
+}
+
+.find-inside-title {
+    margin: 0;
+    font-size: 1rem;
+    font-weight: 700;
+    color: var(--text-color);
+}
+
+.find-inside-item {
+    margin: 0;
+    font-size: 0.95rem;
+    line-height: 0.55;
+    color: var(--text-color);
+}
+
+@media (max-width: 900px) {
+    .find-inside-grid {
+        grid-template-columns: repeat(2, minmax(0, 1fr));
+        gap: 1.4rem 0;
+    }
+
+    .find-inside-column:nth-child(odd) {
+        border-left: none;
+        padding-left: 0;
+    }
+
+    .find-inside-column:nth-child(even) {
+        border-left: 1px solid var(--divider-line-color);
+    }
+}
+
+@media (max-width: 600px) {
+    .find-inside-grid {
+        grid-template-columns: 1fr;
+    }
+
+    .find-inside-column {
+        border-left: none !important;
+        padding: 0;
+    }
+
+    .find-inside-column + .find-inside-column {
+        padding-top: 1.25rem;
+        border-top: 1px solid var(--divider-line-color);
+    }
+}
+
