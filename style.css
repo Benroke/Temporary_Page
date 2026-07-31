@@ -855,7 +855,7 @@ body {
     gap: 2.5rem;
     max-width: 76rem;
     margin: 0 auto;
-    padding: 2.5rem 2rem 4rem;
+    padding: 1rem 2rem 0.7rem;
 }
 
 .why-us-media {
@@ -881,15 +881,15 @@ body {
 
 .why-us-subtitle {
     margin: 0;
-    font-size: 0.95rem;
-    font-weight: 800;
-    letter-spacing: 0.16em;
+    font-size: 1.5rem;
+    font-weight: 770;
+    letter-spacing: 0.05em;
     text-transform: uppercase;
     color: var(--accent-color);
 }
 
 .why-us-heading {
-    margin: 0;
+    margin: -0.65rem 0 0;
     font-size: clamp(1.9rem, 3vw, 2.6rem);
     line-height: 1.1;
     font-weight: 700;
@@ -915,10 +915,12 @@ body {
     gap: 0.7rem;
     font-size: 0.95rem;
     line-height: 1.4;
+    font-weight: 550;
     color: var(--text-color);
 }
 
 .why-us-bullet {
+    position: relative;
     display: inline-flex;
     align-items: center;
     justify-content: center;
@@ -926,10 +928,22 @@ body {
     height: 1.3rem;
     border-radius: 50%;
     background-color: var(--accent-color);
-    color: var(--accent-text-color);
-    font-size: 0.85rem;
+    color: transparent;
+    font-size: 0;
     font-weight: 700;
     flex-shrink: 0;
+}
+
+.why-us-bullet::before {
+    content: '';
+    display: block;
+    width: 55%;
+    height: 55%;
+    background-image: url('assets/images/Checkmark.webp');
+    background-repeat: no-repeat;
+    background-position: center;
+    background-size: contain;
+    filter: brightness(0) invert(1);
 }
 
 @media (max-width: 900px) {
