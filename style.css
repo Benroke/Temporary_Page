@@ -710,7 +710,7 @@ body {
 }
 
 .industries-viewport {
-    overflow: visible;
+    overflow: hidden;
     max-width: 100%;
     margin: 0 auto;
     padding-top: 0.35rem;
