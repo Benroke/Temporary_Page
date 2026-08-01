@@ -1168,7 +1168,7 @@ body {
 .about-hero {
     position: relative;
     min-height: 20rem;
-    padding: 2.5rem 2rem 2rem;
+    padding: 1.2rem 2rem 0rem;
     overflow: hidden;
     background-color: var(--hero-bg-color);
 }
@@ -1231,15 +1231,17 @@ body {
 }
 
 .about-hero-divider {
+    margin: 0.25rem 0;
     width: 5rem;
-    height: 1px;
-    background-color: var(--text-color);
+    height: 2px;
+    background-color: var(--accent-color);
 }
 
 .about-hero-description {
-    max-width: 20rem;
+    max-width: 24rem;
     margin: 0;
     font-size: 1rem;
+    font-weight: 550;
     line-height: 1.7;
     color: var(--text-color);
 }
@@ -1267,7 +1269,7 @@ body {
     gap: 2.5rem;
     max-width: 76rem;
     margin: 0 auto;
-    padding: 2.5rem 2rem 3rem;
+    padding: 2.5rem 2rem 2.5rem;
 }
 
 .our-story-media {
@@ -1316,9 +1318,9 @@ body {
 }
 
 .our-story-divider {
-    width: 5rem;
-    height: 1px;
-    background-color: var(--text-color);
+    width: 2.5rem;
+    height: 2px;
+    background-color: var(--accent-color);
 }
 
 .our-story-paragraph {
@@ -1352,7 +1354,7 @@ body {
 /* ========================= */
 
 .about-quick-advertisement {
-    padding: 2.25rem 1.25rem 2.75rem;
+    padding: 1.5rem 1.25rem 1rem;
     background-color: var(--alternate-bg-color);
 }
 
@@ -1362,14 +1364,7 @@ body {
     justify-content: center;
     gap: 1.25rem;
     max-width: 78rem;
-    margin: 0 auto 1.5rem;
-}
-
-.about-quick-advertisement-line {
-    flex: 1;
-    max-width: 9rem;
-    height: 1px;
-    background-color: var(--accent-color);
+    margin: 0 auto 0.5rem;
 }
 
 .about-quick-advertisement-kicker {
@@ -1389,7 +1384,7 @@ body {
     gap: 1rem;
     max-width: 78rem;
     margin: 0 auto;
-    padding: 1.4rem 1.6rem;
+    padding: 0 1.6rem;
     background-color: transparent;
 }
 
@@ -1434,6 +1429,7 @@ body {
 .about-quick-advertisement-text {
     display: flex;
     align-items: center;
+    max-width: 1rem;
     font-size: 1rem;
     font-weight: 700;
     line-height: 1.2;
