@@ -104,6 +104,21 @@ body {
 
 
 
+
+
+
+
+
+
+
+
+
+/* ========================================================================================= */
+/* =                                      HOME PAGE                                        = */
+/* ========================================================================================= */
+
+
+
 /* ========================= */
 /*           HERO            */
 /* ========================= */
@@ -1111,3 +1126,131 @@ body {
 
 
 
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+/* ========================================================================================= */
+/* =                                      ABOUT PAGE                                       = */
+/* ========================================================================================= */
+
+
+
+/* ========================= */
+/*           HERO            */
+/* ========================= */
+
+.about-hero {
+    position: relative;
+    min-height: 20rem;
+    padding: 2.5rem 2rem 2rem;
+    overflow: hidden;
+    background-color: var(--hero-bg-color);
+}
+
+.about-hero::before {
+    content: '';
+    position: absolute;
+    inset: 0;
+    background: linear-gradient(90deg, rgba(249, 255, 245, 0.96) 0%, rgba(249, 255, 245, 0.9) 38%, rgba(249, 255, 245, 0.34) 72%, rgba(249, 255, 245, 0) 100%);
+    backdrop-filter: blur(2px);
+    pointer-events: none;
+    z-index: 1;
+}
+
+.about-hero::after {
+    content: '';
+    position: absolute;
+    inset: 0;
+    background-image: url('assets/images/Hero.webp');
+    background-size: cover;
+    background-position: center 25%;
+    background-repeat: no-repeat;
+    transform: scaleX(-1) scale(1.16);
+    pointer-events: none;
+    z-index: 0;
+}
+
+.about-hero-content {
+    position: relative;
+    z-index: 2;
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    gap: 1rem;
+    max-width: 34rem;
+    padding: 1.5rem 1.25rem;
+}
+
+.about-hero-subheading {
+    margin: 0;
+    font-size: 0.95rem;
+    font-weight: 800;
+    letter-spacing: 0.12em;
+    text-transform: uppercase;
+    color: var(--accent-color);
+}
+
+.about-hero-heading {
+    display: flex;
+    flex-direction: column;
+    gap: 0.15rem;
+    margin: 0;
+    font-size: clamp(2.2rem, 4vw, 3.2rem);
+    line-height: 1.09;
+    color: var(--text-color);
+}
+
+.about-hero-heading-line {
+    display: block;
+}
+
+.about-hero-divider {
+    width: 5rem;
+    height: 1px;
+    background-color: var(--text-color);
+}
+
+.about-hero-description {
+    max-width: 20rem;
+    margin: 0;
+    font-size: 1rem;
+    line-height: 1.7;
+    color: var(--text-color);
+}
+
+@media (max-width: 900px) {
+    .about-hero {
+        min-height: 28rem;
+        padding: 3rem 1.25rem 2.25rem;
+    }
+
+    .about-hero-content {
+        max-width: 100%;
+    }
+}

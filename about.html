@@ -1,0 +1,106 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <title>IDK yet</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+
+<body>
+
+
+
+
+
+    <!-- Navigation Section -->
+    <nav class="navbar">
+        <a href="#home" class="brand">
+            <span class="brand-icon" aria-hidden="true">Logo</span>
+            <span class="brand-text">
+                <strong>Company Name</strong>
+                <small>Cheese is the best, if you think otherwise, just die</small>
+            </span>
+        </a>
+
+        <div class="nav-links">
+            <a class="nav-link" href="index.html">Home</a>
+            <a class="nav-link active" href="about.html">About</a>
+            <a class="contact-btn" href="#contact">Contact Us</a>
+        </div>
+    </nav>
+
+    <script>
+        const navLinks = document.querySelectorAll('.nav-link');
+
+        navLinks.forEach(link => {
+            link.addEventListener('click', () => {
+                navLinks.forEach(item => item.classList.remove('active'));
+                link.classList.add('active');
+            });
+        });
+    </script>
+    
+
+
+
+
+    <!-- Hero Section -->
+    <section class="about-hero" aria-labelledby="about-hero-heading">
+        <div class="about-hero-content">
+            <p class="about-hero-subheading">About Company Name</p>
+
+            <h1 class="about-hero-heading" id="about-hero-heading">
+                <span class="about-hero-heading-line">Rooted in Idaho.</span>
+                <span class="about-hero-heading-line">Rooted on You</span>
+            </h1>
+
+            <div class="about-hero-divider" aria-hidden="true"></div>
+
+            <p class="about-hero-description">
+                We create refreshment experiences that feel personal, practical, and built around the people who use them every day.
+            </p>
+        </div>
+    </section>
+
+
+
+
+
+    <!-- Description Section -->
+
+
+
+
+
+    <!-- Quick Advertisement Section -->
+    
+
+
+
+
+    <!-- Our Mission Section -->
+    
+
+
+
+
+    <!-- Our Values Section -->
+    
+
+
+
+
+    <!-- Contact Section -->
+    
+
+
+
+
+    <!-- Footer Section -->
+    
+
+
+    
+</body>
+</html>
