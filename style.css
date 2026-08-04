@@ -5,7 +5,7 @@
     --accent-text-color: #ffffff;
     --hero-bg-color: #cee1ce;
     --divider-line-color: #dbdbdb;
-    --alternate-bg-color: #ececec;
+    --alternate-bg-color: #f6f6f6;
 }
 
 
@@ -285,16 +285,18 @@ body {
     display: flex;
     align-items: center;
     justify-content: center;
-    width: 2.8rem;
-    height: 2.8rem;
+    width: 2.85rem;
+    height: 2.85rem;
     flex-shrink: 0;
     text-decoration: none;
 }
 
 .quick-advertisement-icon img {
+    display: block;
     width: 100%;
     height: 100%;
     object-fit: contain;
+    object-position: center;
 }
 
 .quick-advertisement-text {
@@ -632,14 +634,14 @@ body {
     display: inline-flex;
     align-items: center;
     justify-content: center;
-    width: 2.65rem;
-    height: 2.65rem;
     margin-bottom: 0.2rem;
-    border-radius: 50%;
-    background-color: var(--accent-color);
-    color: var(--accent-text-color);
-    font-size: 1.2rem;
-    font-weight: 700;
+}
+
+.find-inside-icon img {
+    display: block;
+    width: 3.2rem;
+    height: 3.2rem;
+    object-fit: contain;
 }
 
 .find-inside-title {
@@ -775,7 +777,7 @@ body {
 
 .industry-icon {
     position: absolute;
-    top: 50%;
+    top: 9rem;
     left: 50%;
     display: inline-flex;
     align-items: center;
@@ -783,16 +785,16 @@ body {
     width: 3rem;
     height: 3rem;
     border-radius: 50%;
-    background-color: var(--accent-color);
-    color: var(--accent-text-color);
-    box-shadow: 0 8px 18px rgba(9, 78, 9, 0.16);
-    transform: translate(-50%, -20%);
+    background-color: #ffffff;
+    transform: translate(-50%, -50%);
     z-index: 2;
 }
 
-.industry-icon span {
-    font-size: 1.05rem;
-    font-weight: 700;
+.industry-icon img {
+    display: block;
+    width: 3.05rem;
+    height: 3.05rem;
+    object-fit: contain;
 }
 
 .industry-content {
@@ -954,7 +956,7 @@ body {
     display: block;
     width: 55%;
     height: 55%;
-    background-image: url('assets/images/Checkmark.webp');
+    background-image: url('assets/icons/miscellaneous/checkmark.webp');
     background-repeat: no-repeat;
     background-position: center;
     background-size: contain;
@@ -1568,9 +1570,13 @@ body {
 .about-hero::before {
     content: '';
     position: absolute;
-    inset: 0;
-    background: linear-gradient(90deg, rgba(249, 255, 245, 0.96) 0%, rgba(249, 255, 245, 0.9) 38%, rgba(249, 255, 245, 0.34) 72%, rgba(249, 255, 245, 0) 100%);
-    backdrop-filter: blur(2px);
+    left: -2%;
+    top: -25%;
+    width: 60rem;
+    max-width: 45%;
+    height: 150%;
+    background: radial-gradient(ellipse at 30% 50%, rgba(249, 255, 245, 1) 0%, rgba(249, 255, 245, 0.82) 28%, rgba(249, 255, 245, 0.55) 58%, rgba(249, 255, 245, 0.2) 78%, rgba(249, 255, 245, 0) 92%);
+    filter: blur(14px);
     pointer-events: none;
     z-index: 1;
 }
@@ -1579,11 +1585,11 @@ body {
     content: '';
     position: absolute;
     inset: 0;
-    background-image: url('assets/images/Hero.webp');
+    background-image: url('assets/images/Perine_Bridge_Stock.webp');
     background-size: cover;
-    background-position: center 25%;
+    background-position: center 40%;
     background-repeat: no-repeat;
-    transform: scaleX(-1) scale(1.16);
+    transform: scaleX(-1) scale(1);
     pointer-events: none;
     z-index: 0;
 }
@@ -1746,7 +1752,7 @@ body {
 /* ========================= */
 
 .about-quick-advertisement {
-    padding: 1.5rem 1.25rem 1rem;
+    padding: 0.75rem 1.25rem 0.5rem;
     background-color: var(--alternate-bg-color);
 }
 
@@ -1756,7 +1762,7 @@ body {
     justify-content: center;
     gap: 1.25rem;
     max-width: 78rem;
-    margin: 0 auto 0.5rem;
+    margin: 0 auto 0.75rem;
 }
 
 .about-quick-advertisement-kicker {
@@ -1769,83 +1775,24 @@ body {
     white-space: nowrap;
 }
 
-.about-quick-advertisement-list {
-    display: grid;
-    grid-template-columns: repeat(5, minmax(12rem, 1fr));
-    align-items: center;
-    gap: 1rem;
+.about-quick-advertisement-visual {
+    display: flex;
+    justify-content: center;
     max-width: 78rem;
     margin: 0 auto;
-    padding: 0 1.6rem;
-    background-color: transparent;
+    padding: 0;
 }
 
-.about-quick-advertisement-item {
-    position: relative;
-    display: flex;
-    align-items: center;
-    justify-content: flex-start;
-    gap: 1rem;
-    min-width: 0;
-    min-height: 3.75rem;
-    padding: 0.75rem 1rem;
-    overflow: visible;
-}
-
-.about-quick-advertisement-item:not(:last-child)::after {
-    content: '';
-    position: absolute;
-    right: 0.1rem;
-    top: 50%;
-    transform: translateY(-50%);
-    width: 2px;
-    height: 60%;
-    background-color: var(--divider-line-color);
-    border-radius: 10px;
-    z-index: 1;
-}
-
-.about-quick-advertisement-icon {
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    width: 3rem;
-    height: 3rem;
-    flex-shrink: 0;
-}
-
-.about-quick-advertisement-icon img {
-    width: 100%;
-    height: 100%;
-    object-fit: contain;
-}
-
-.about-quick-advertisement-text {
-    display: flex;
-    align-items: center;
-    max-width: 100%;
-    font-size: 0.73rem;
-    font-weight: 800;
-    line-height: 1.2;
-    color: var(--text-color);
-    white-space: normal;
-    overflow-wrap: anywhere;
+.about-quick-advertisement-visual img {
+    display: block;
+    width: min(100%, 74rem);
+    height: auto;
+    border-radius: 0.25rem;
 }
 
 @media (max-width: 900px) {
-    .about-quick-advertisement-list {
-        grid-template-columns: repeat(2, minmax(0, 1fr));
-        gap: 0.85rem;
-        padding: 1rem 0.25rem;
-    }
-
-    .about-quick-advertisement-item {
-        justify-content: center;
-        padding: 0.75rem 0.35rem;
-    }
-
-    .about-quick-advertisement-item:not(:last-child)::after {
-        display: none;
+    .about-quick-advertisement-visual {
+        padding: 0;
     }
 }
 
@@ -2028,8 +1975,8 @@ body {
     display: flex;
     align-items: flex-start;
     justify-content: center;
-    width: 3rem;
-    height: 3rem;
+    width: 2.7rem;
+    height: 2.7rem;
     flex-shrink: 0;
     margin-top: 0.1rem;
 }
@@ -2039,6 +1986,16 @@ body {
     width: 100%;
     height: 100%;
     object-fit: contain;
+}
+
+.our-values-icon--large {
+    width: 6.2rem;
+    height: 6.2rem;
+}
+
+.our-values-icon--large img {
+    width: 100%;
+    height: 100%;
 }
 
 .our-values-copy {
@@ -2166,5 +2123,101 @@ body {
 
 
 /* ========================= */
-/*        NOTHING YET        */
+/*           HERO 3          */
 /* ========================= */
+
+.contact-hero {
+    position: relative;
+    min-height: 20rem;
+    padding: 1.2rem 2rem 0rem;
+    overflow: hidden;
+    background-color: var(--hero-bg-color);
+}
+
+.contact-hero::before {
+    content: '';
+    position: absolute;
+    left: -2%;
+    top: -25%;
+    width: 60rem;
+    max-width: 45%;
+    height: 150%;
+    background: radial-gradient(ellipse at 30% 50%, rgba(249, 255, 245, 1) 0%, rgba(249, 255, 245, 0.82) 28%, rgba(249, 255, 245, 0.55) 58%, rgba(249, 255, 245, 0.2) 78%, rgba(249, 255, 245, 0) 92%);
+    filter: blur(14px);
+    pointer-events: none;
+    z-index: 1;
+}
+
+.contact-hero::after {
+    content: '';
+    position: absolute;
+    inset: 0;
+    background-image: url('assets/images/Perine_Bridge_Stock.webp');
+    background-size: cover;
+    background-position: center 40%;
+    background-repeat: no-repeat;
+    transform: scaleX(-1) scale(1);
+    pointer-events: none;
+    z-index: 0;
+}
+
+.contact-hero-content {
+    position: relative;
+    z-index: 2;
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    gap: 1rem;
+    max-width: 34rem;
+    padding: 1.5rem 1.25rem;
+}
+
+.contact-hero-subheading {
+    margin: 0;
+    font-size: 0.95rem;
+    font-weight: 800;
+    letter-spacing: 0.12em;
+    text-transform: uppercase;
+    color: var(--accent-color);
+}
+
+.contact-hero-heading {
+    display: flex;
+    flex-direction: column;
+    gap: 0.15rem;
+    margin: 0;
+    font-size: clamp(2.2rem, 4vw, 3.2rem);
+    line-height: 1.09;
+    color: var(--text-color);
+}
+
+.contact-hero-heading-line {
+    display: block;
+}
+
+.contact-hero-divider {
+    margin: 0.25rem 0;
+    width: 5rem;
+    height: 2px;
+    background-color: var(--accent-color);
+}
+
+.contact-hero-description {
+    max-width: 24rem;
+    margin: 0;
+    font-size: 1rem;
+    font-weight: 550;
+    line-height: 1.7;
+    color: var(--text-color);
+}
+
+@media (max-width: 900px) {
+    .contact-hero {
+        min-height: 28rem;
+        padding: 3rem 1.25rem 2.25rem;
+    }
+
+    .contact-hero-content {
+        max-width: 100%;
+    }
+}
