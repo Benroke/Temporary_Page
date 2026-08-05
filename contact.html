@@ -16,10 +16,9 @@
     <!-- Navigation Section -->
     <nav class="navbar">
         <a href="#home" class="brand">
-            <span class="brand-icon" aria-hidden="true">Logo</span>
+            <span class="brand-icon" aria-hidden="true"></span>
             <span class="brand-text">
-                <strong>Company Name</strong>
-                <small>Cheese is the best, if you think otherwise, just die</small>
+                <strong>Evergreen Amenities</strong>
             </span>
         </a>
 
@@ -49,6 +48,38 @@
             <p class="contact-hero-description">
                 Have a question about our AI Smart Coolers, MicroMarkets, or vending solutions? We're here to help.<br><br>Reach out today for a free consultation. 
             </p>
+
+            <div class="contact-hero-features" aria-label="Contact highlights">
+                <article class="contact-hero-feature">
+                    <div class="contact-hero-feature-icon" aria-hidden="true">
+                        <svg viewBox="0 0 24 24">
+                            <rect x="4" y="4" width="16" height="16" rx="4"></rect>
+                            <path d="M12 7v10M7 12h10"></path>
+                        </svg>
+                    </div>
+                    <p class="contact-hero-feature-text">Free Consultation</p>
+                </article>
+
+                <article class="contact-hero-feature">
+                    <div class="contact-hero-feature-icon" aria-hidden="true">
+                        <svg viewBox="0 0 24 24">
+                            <rect x="4" y="4" width="16" height="16" rx="4"></rect>
+                            <path d="M12 7v10M7 12h10"></path>
+                        </svg>
+                    </div>
+                    <p class="contact-hero-feature-text">Quick Response</p>
+                </article>
+
+                <article class="contact-hero-feature">
+                    <div class="contact-hero-feature-icon" aria-hidden="true">
+                        <svg viewBox="0 0 24 24">
+                            <rect x="4" y="4" width="16" height="16" rx="4"></rect>
+                            <path d="M12 7v10M7 12h10"></path>
+                        </svg>
+                    </div>
+                    <p class="contact-hero-feature-text">Custom Solutions</p>
+                </article>
+            </div>
         </div>
     </section>
 
@@ -57,39 +88,133 @@
 
 
     <!-- Form Section -->
-    <section class="form-section" aria-labelledby="form-heading">
-        <div class="form-container">
-            <h2 class="form-heading" id="form-heading">Get in Touch</h2>
-            <p class="form-description">
-                Have questions or want to learn more about our services? Fill out the form below and we'll get back to you as soon as possible.
-            </p>
+    <section class="contact-form-section" aria-labelledby="contact-form-heading">
+        <div class="contact-form-shell">
+            <div class="contact-form-info">
+                <p class="contact-form-kicker">GET IN TOUCH</p>
 
-            <form class="contact-form" action="#" method="post">
-                <div class="form-group">
-                    <label for="name">Name</label>
-                    <input type="text" id="name" name="name" required>
-                </div>
+                <article class="contact-form-info-item">
+                    <div class="contact-form-info-icon" aria-hidden="true">
+                        <img src="assets/icons/form_section_icons/phone_icon.webp" alt="">
+                    </div>
 
-                <div class="form-group">
-                    <label for="email">Email</label>
-                    <input type="email" id="email" name="email" required>
-                </div>
+                    <div class="contact-form-info-copy">
+                        <h2 class="contact-form-info-title">Phone</h2>
+                        <p class="contact-form-info-text">(208) 123-4567</p>
+                    </div>
+                </article>
 
-                <div class="form-group">
-                    <label for="phone">Phone Number</label>
-                    <input type="tel" id="phone" name="phone" required>
-                </div>
+                <article class="contact-form-info-item">
+                    <div class="contact-form-info-icon" aria-hidden="true">
+                        <img src="assets/icons/form_section_icons/message_icon.webp" alt="">
+                    </div>
 
-                <div class="form-group">
-                    <label for="message">Message</label>
-                    <textarea id="message" name="message" rows="5" required></textarea>
-                </div>
+                    <div class="contact-form-info-copy">
+                        <h2 class="contact-form-info-title">Email</h2>
+                        <p class="contact-form-info-text">info@evergreenamenities.com</p>
+                    </div>
+                </article>
 
-                <button type="submit" class="submit-btn">Send Message</button>
-            </form>
+                <article class="contact-form-info-item">
+                    <div class="contact-form-info-icon" aria-hidden="true">
+                        <img src="assets/icons/form_section_icons/other_map_icon.webp" alt="">
+                    </div>
+
+                    <div class="contact-form-info-copy">
+                        <h2 class="contact-form-info-title">Service Area</h2>
+                        <p class="contact-form-info-text">Proudly serving the Magic Valley and surrounding Southern Idaho.</p>
+                    </div>
+                </article>
+
+                <article class="contact-form-info-item">
+                    <div class="contact-form-info-icon" aria-hidden="true">
+                        <img src="assets/icons/form_section_icons/clock_icon.webp" alt="">
+                    </div>
+
+                    <div class="contact-form-info-copy">
+                        <h2 class="contact-form-info-title">Business Hours</h2>
+                        <p class="contact-form-info-text">Monday - Friday<br>8:00 AM - 5:00 PM</p>
+                    </div>
+                </article>
+            </div>
+
+            <div class="contact-form-panel">
+                <h2 class="contact-form-panel-kicker" id="contact-form-heading">SEND US A MESSAGE</h2>
+
+                <form class="contact-form" action="#" method="post">
+                    <div class="contact-form-grid">
+                        <label class="contact-form-field">
+                            <span>Name</span>
+                            <input type="text" name="name" autocomplete="name" required>
+                        </label>
+
+                        <label class="contact-form-field">
+                            <span>Business Name</span>
+                            <input type="text" name="business-name" autocomplete="organization" required>
+                        </label>
+
+                        <label class="contact-form-field">
+                            <span>Email</span>
+                            <input type="email" name="email" autocomplete="email" required>
+                        </label>
+
+                        <label class="contact-form-field">
+                            <span>Phone</span>
+                            <input type="tel" name="phone" autocomplete="tel" required>
+                        </label>
+
+                        <label class="contact-form-field contact-form-field--full">
+                            <span>Business Type</span>
+                            <select name="business-type" required>
+                                <option value="" selected disabled>Select a business type</option>
+                                <option value="office">Office</option>
+                                <option value="medical">Medical</option>
+                                <option value="school">School</option>
+                                <option value="hospitality">Hospitality</option>
+                                <option value="fitness">Fitness</option>
+                                <option value="other">Other</option>
+                            </select>
+                        </label>
+
+                        <label class="contact-form-field contact-form-field--full contact-form-field--textarea">
+                            <span>How can we help?</span>
+                            <textarea name="message" rows="6" required></textarea>
+                        </label>
+
+                        <button class="contact-form-submit" type="submit">SUBMIT MESSAGE</button>
+
+                        <p class="contact-form-privacy">
+                            <span class="contact-form-privacy-icon" aria-hidden="true">
+                                <svg viewBox="0 0 24 24">
+                                    <path d="M7.5 10V8.5a4.5 4.5 0 0 1 9 0V10"></path>
+                                    <rect x="5.5" y="10" width="13" height="10" rx="2"></rect>
+                                </svg>
+                            </span>
+                            <span>Your information is secure and will never be shared.</span>
+                        </p>
+                    </div>
+                </form>
+            </div>
         </div>
     </section>
 
+
+
+
+
+    <!-- Quick Advertisement 3 Section -->
+
+
+
+
+
+    <!-- Map Section -->
+    
+
+
+
+
+    <!-- Footer Section -->
 
 
 
