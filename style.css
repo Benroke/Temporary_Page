@@ -1,3 +1,5 @@
+@import url('https://fonts.googleapis.com/css2?family=Bebas+Neue&display=swap');
+
 :root {
     --bg-color: #f9fff5;
     --text-color: #2d2e2c;
@@ -7,6 +9,7 @@
     --divider-line-color: #dbdbdb;
     --alternate-bg-color: #f6f6f6;
     --brand-logo-image: url('assets/icons/miscellaneous/Logo.webp');
+    --solid-brand-logo-image: url('assets/icons/miscellaneous/Solid_Logo.webp');
 }
 
 
@@ -42,15 +45,15 @@ body {
 
 .brand-icon {
     display: inline-block;
-    width: 3.55rem;
-    height: 3.55rem;
+    width: 2.5rem;
+    height: 2.5rem;
     flex-shrink: 0;
     background-color: var(--accent-color);
-    -webkit-mask-image: var(--brand-logo-image);
+    -webkit-mask-image: var(--solid-brand-logo-image);
     -webkit-mask-repeat: no-repeat;
     -webkit-mask-position: center;
     -webkit-mask-size: contain;
-    mask-image: var(--brand-logo-image);
+    mask-image: var(--solid-brand-logo-image);
     mask-repeat: no-repeat;
     mask-position: center;
     mask-size: contain;
@@ -63,7 +66,7 @@ body {
 }
 
 .brand-text strong {
-    font-size: 0.95rem;
+    font-size: 2rem;
 }
 
 .brand-text small {
@@ -76,11 +79,11 @@ body {
 }
 
 .navbar .brand-text strong {
-    font-family: "Avenir Next", "Aptos", "Segoe UI", "Helvetica Neue", Arial, sans-serif;
-    font-size: clamp(1.3rem, 1.65vw, 1.95rem);
-    font-weight: 700;
+    font-family: "Bebas Neue", sans-serif;
+    font-size: clamp(2rem, 2vw, 2.3rem);
+    font-weight: 200;
     letter-spacing: 0.015em;
-    line-height: 1;
+    line-height: 1.05;
     color: var(--accent-color);
 }
 
@@ -91,7 +94,7 @@ body {
 .nav-links {
     display: flex;
     align-items: center;
-    gap: 1.85rem;
+    gap: 1.65rem;
 }
 
 .nav-links .nav-link {
@@ -116,9 +119,7 @@ body {
 }
 
 .contact-btn {
-    padding: 0.6rem 1.35rem;
-    min-width: 7.75rem;
-    margin-left: 0.15rem;
+    padding: 0.6rem 0.9rem;
     display: inline-flex;
     align-items: center;
     justify-content: center;
@@ -229,6 +230,16 @@ body {
     height: 0.95rem;
 }
 
+.home-footer-phone-icon svg {
+    width: 100%;
+    height: 100%;
+    fill: none;
+    stroke: currentColor;
+    stroke-width: 1.9;
+    stroke-linecap: round;
+    stroke-linejoin: round;
+}
+
 .home-footer-social {
     display: flex;
     align-items: center;
@@ -254,6 +265,16 @@ body {
     stroke-width: 1.7;
     stroke-linecap: round;
     stroke-linejoin: round;
+}
+
+.home-footer-linkedin svg rect:first-child {
+    fill: none;
+}
+
+.home-footer-linkedin svg circle,
+.home-footer-linkedin svg path {
+    fill: currentColor;
+    stroke: none;
 }
 
 .home-footer-social a:hover {
@@ -1805,7 +1826,7 @@ body {
 /* ========================= */
 
 .about-quick-advertisement {
-    padding: 0.75rem 1.25rem 0.5rem;
+    padding: 1.5rem 1.25rem 1rem;
     background-color: var(--alternate-bg-color);
 }
 
@@ -1815,7 +1836,7 @@ body {
     justify-content: center;
     gap: 1.25rem;
     max-width: 78rem;
-    margin: 0 auto 0.75rem;
+    margin: 0 auto 0.5rem;
 }
 
 .about-quick-advertisement-kicker {
@@ -1828,24 +1849,85 @@ body {
     white-space: nowrap;
 }
 
-.about-quick-advertisement-visual {
-    display: flex;
-    justify-content: center;
+.about-quick-advertisement-list {
+    display: grid;
+    grid-template-columns: repeat(5, minmax(12rem, 1fr));
+    align-items: center;
+    gap: 1rem;
     max-width: 78rem;
     margin: 0 auto;
-    padding: 0;
+    padding: 0 1.6rem;
+    background-color: transparent;
 }
 
-.about-quick-advertisement-visual img {
+.about-quick-advertisement-item {
+    position: relative;
+    display: flex;
+    align-items: center;
+    justify-content: flex-start;
+    gap: 1rem;
+    min-width: 0;
+    min-height: 3.75rem;
+    padding: 0.75rem 1rem;
+    overflow: visible;
+}
+
+.about-quick-advertisement-item:not(:last-child)::after {
+    content: '';
+    position: absolute;
+    right: 0.1rem;
+    top: 50%;
+    transform: translateY(-50%);
+    width: 2px;
+    height: 60%;
+    background-color: var(--divider-line-color);
+    border-radius: 10px;
+    z-index: 1;
+}
+
+.about-quick-advertisement-icon {
+    --about-quick-advertisement-icon-size: 3rem;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: var(--about-quick-advertisement-icon-size);
+    height: var(--about-quick-advertisement-icon-size);
+    flex-shrink: 0;
+}
+
+.about-quick-advertisement-icon img {
     display: block;
-    width: min(100%, 74rem);
-    height: auto;
-    border-radius: 0.25rem;
+    width: 100%;
+    height: 100%;
+    object-fit: contain;
+}
+
+.about-quick-advertisement-text {
+    display: flex;
+    align-items: center;
+    max-width: 100%;
+    font-size: 0.8rem;
+    font-weight: 800;
+    line-height: 1.2;
+    color: var(--text-color);
+    white-space: normal;
+    overflow-wrap: anywhere;
 }
 
 @media (max-width: 900px) {
-    .about-quick-advertisement-visual {
-        padding: 0;
+    .about-quick-advertisement-list {
+        grid-template-columns: repeat(2, minmax(0, 1fr));
+        gap: 0.85rem;
+        padding: 1rem 0.25rem;
+    }
+
+    .about-quick-advertisement-item {
+        justify-content: center;
+        padding: 0.75rem 0.35rem;
+    }
+
+    .about-quick-advertisement-item:not(:last-child)::after {
+        display: none;
     }
 }
 
@@ -2205,11 +2287,11 @@ body {
     content: '';
     position: absolute;
     inset: 0;
-    background-image: url('assets/images/Perine_Bridge_Stock.webp');
+    background-image: url('assets/images/Contact.webp');
     background-size: cover;
     background-position: center 40%;
     background-repeat: no-repeat;
-    transform: scaleX(-1) scale(1);
+    transform: scaleX(1) scale(1);
     pointer-events: none;
     z-index: 0;
 }
@@ -2284,23 +2366,19 @@ body {
     display: inline-flex;
     align-items: center;
     justify-content: center;
-    width: 2.3rem;
-    height: 2.3rem;
-    border-radius: 0.65rem;
-    background-color: rgba(255, 255, 255, 0.65);
-    border: 1px solid rgba(9, 78, 9, 0.18);
-    color: var(--accent-color);
+    width: 1.85rem;
+    height: 1.85rem;
+    border-radius: 50%;
+    background-color: #ffffff;
     flex: 0 0 auto;
 }
 
-.contact-hero-feature-icon svg {
-    width: 1.15rem;
-    height: 1.15rem;
-    fill: none;
-    stroke: currentColor;
-    stroke-width: 2;
-    stroke-linecap: round;
-    stroke-linejoin: round;
+.contact-hero-feature-icon img {
+    display: block;
+    width: 2.25rem;
+    height: 2.25rem;
+    object-fit: contain;
+    object-position: center;
 }
 
 .contact-hero-feature-text {
@@ -2330,7 +2408,7 @@ body {
 /* ========================= */
 
 .contact-form-section {
-    padding: 3rem 1.5rem 4rem;
+    padding: 3rem 1.5rem 0;
     background-color: var(--bg-color);
 }
 
@@ -2574,4 +2652,207 @@ body {
 /* ========================= */
 /*  Quick Advertisement 3    */
 /* ========================= */
+
+.contact-quick-advertisement {
+    padding: 0.5rem 1rem 0.5rem;
+    background-color: var(--alternate-bg-color);
+}
+
+.contact-quick-advertisement-header {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    max-width: 78rem;
+    margin: 0.6rem auto 0.3rem;
+    padding: 0 1.15rem;
+}
+
+.contact-quick-advertisement-heading {
+    margin: 0;
+    font-size: 0.92rem;
+    font-weight: 800;
+    letter-spacing: 0.15em;
+    text-transform: uppercase;
+    color: var(--accent-color);
+    text-align: center;
+}
+
+.contact-quick-advertisement-list {
+    display: grid;
+    grid-template-columns: repeat(6, minmax(0, 1fr));
+    align-items: center;
+    max-width: 78rem;
+    margin: 0 auto;
+    padding: 1rem 1.15rem;
+    background-color: transparent;
+}
+
+.contact-quick-advertisement-item {
+    position: relative;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 0.8rem;
+    min-width: 0;
+    padding: 0.45rem 1rem;
+}
+
+.contact-quick-advertisement-item:not(:last-child)::after {
+    content: '';
+    position: absolute;
+    right: -0.15rem;
+    top: 50%;
+    transform: translateY(-50%);
+    width: 2px;
+    height: 60%;
+    background-color: var(--divider-line-color);
+    border-radius: 10px;
+}
+
+.contact-quick-advertisement-icon {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 2.6rem;
+    height: 2.6rem;
+    flex-shrink: 0;
+}
+
+.contact-quick-advertisement-icon img {
+    display: block;
+    width: 100%;
+    height: 100%;
+    object-fit: contain;
+    object-position: center;
+}
+
+.contact-quick-advertisement-text {
+    display: flex;
+    flex-direction: column;
+    gap: 0.08rem;
+    max-width: 100%;
+    font-size: 0.73rem;
+    font-weight: 800;
+    line-height: 1.12;
+    color: var(--text-color);
+}
+
+@media (max-width: 1100px) {
+    .contact-quick-advertisement-list {
+        grid-template-columns: repeat(3, minmax(0, 1fr));
+        gap: 0.75rem;
+    }
+
+    .contact-quick-advertisement-item {
+        justify-content: flex-start;
+    }
+}
+
+@media (max-width: 700px) {
+    .contact-quick-advertisement-list {
+        grid-template-columns: repeat(2, minmax(0, 1fr));
+        padding: 0.9rem 0.35rem;
+    }
+
+    .contact-quick-advertisement-item {
+        padding: 0.45rem 0.25rem;
+    }
+
+    .contact-quick-advertisement-item:not(:last-child)::after {
+        display: none;
+    }
+}
+
+
+
+/* ========================= */
+/*          MAP              */
+/* ========================= */
+
+.contact-map-section {
+    display: grid;
+    grid-template-columns: minmax(0, 1.55fr) minmax(18rem, 0.95fr);
+    align-items: start;
+    max-width: 78rem;
+    margin: 0 auto;
+    background-color: var(--bg-color);
+}
+
+.contact-map-media {
+    position: relative;
+    height: 21rem;
+    background-color: #d9ded8;
+    overflow: hidden;
+}
+
+.contact-map-iframe {
+    display: block;
+    width: 100%;
+    height: 100%;
+    border: 0;
+}
+
+.contact-map-highlight {
+    position: absolute;
+    inset: 24% 28% 24% 34%;
+    border: 0.35rem solid rgba(118, 122, 118, 0.56);
+    border-radius: 50%;
+    background-color: rgba(156, 161, 156, 0.08);
+    box-shadow: 0 0 0 1rem rgba(156, 161, 156, 0.08);
+    pointer-events: none;
+}
+
+.contact-map-content {
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-start;
+    gap: 0.9rem;
+    padding: 1.15rem 1.5rem 1.15rem 1.25rem;
+    background-color: var(--bg-color);
+}
+
+.contact-map-kicker {
+    margin: 0;
+    font-size: 0.9rem;
+    font-weight: 800;
+    letter-spacing: 0.13em;
+    text-transform: uppercase;
+    color: var(--accent-color);
+}
+
+.contact-map-description {
+    margin: 0;
+    font-size: 0.92rem;
+    font-weight: 200;
+    line-height: 1.6;
+    color: var(--text-color);
+}
+
+.contact-map-columns {
+    margin-top: 0.1rem;
+}
+
+@media (max-width: 900px) {
+    .contact-map-section {
+        grid-template-columns: 1fr;
+    }
+
+    .contact-map-media {
+        height: 17rem;
+    }
+
+    .contact-map-content {
+        padding: 1rem 1.25rem 1.5rem;
+    }
+
+    .contact-map-highlight {
+        inset: 26% 30% 26% 32%;
+    }
+}
+
+@media (max-width: 600px) {
+    .contact-map-media {
+        height: 14rem;
+    }
+}
 
