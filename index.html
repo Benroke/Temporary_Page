@@ -487,7 +487,7 @@
     <!-- Why Us Section -->
     <section class="why-us-section" aria-labelledby="why-us-heading">
         <div class="why-us-media">
-            <img src="assets/images/Hero.webp" alt="Placeholder image for the Why Us section">
+            <img src="assets/images/Why_Us.webp" alt="Placeholder image for the Why Us section">
         </div>
 
         <div class="why-us-content">
@@ -679,17 +679,17 @@
                 <form class="ready-upgrade-form">
                     <label class="ready-upgrade-field">
                         <span>Name</span>
-                        <input type="text" required>
+                        <input type="text" name="name" autocomplete="name" required>
                     </label>
 
                     <label class="ready-upgrade-field">
                         <span>Email</span>
-                        <input type="email" required>
+                        <input type="email" name="email" autocomplete="email" required>
                     </label>
 
                     <label class="ready-upgrade-field">
                         <span>Business Type</span>
-                        <select required>
+                        <select name="business-type" required>
                             <option value="" selected disabled>Select</option>
                             <option value="fitness-centers">Fitness Centers</option>
                             <option value="manufacturing">Manufacturing</option>
@@ -709,17 +709,17 @@
                 <form class="ready-upgrade-form">
                     <label class="ready-upgrade-field">
                         <span>Business Name</span>
-                        <input type="text">
+                        <input type="text" name="business-name" autocomplete="organization">
                     </label>
 
                     <label class="ready-upgrade-field">
                         <span>Phone</span>
-                        <input type="tel" required>
+                        <input type="tel" name="phone" autocomplete="tel" required>
                     </label>
 
                     <label class="ready-upgrade-field ready-upgrade-field--textarea">
                         <span>How can we help?</span>
-                        <textarea rows="5"></textarea>
+                        <textarea name="message" rows="5"></textarea>
                     </label>
                 </form>
             </div>
@@ -792,6 +792,8 @@
     </section>
 
 
+
+    <script src="assets/js/ready_upgrade_transfer.js"></script>
 
 
 </body>
