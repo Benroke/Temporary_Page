@@ -7,7 +7,7 @@
     --accent-text-color: #ffffff;
     --hero-bg-color: #cee1ce;
     --divider-line-color: #dbdbdb;
-    --alternate-bg-color: #f6f6f6;
+    --alternate-bg-color: #f2f2f2;
     --brand-logo-image: url('assets/icons/miscellaneous/Logo.webp');
     --solid-brand-logo-image: url('assets/icons/miscellaneous/Solid_Logo.webp');
 }
@@ -1390,16 +1390,19 @@ body {
 }
 
 .ready-upgrade-intro-icon {
-    display: inline-flex;
-    align-items: center;
-    justify-content: center;
-    width: 2.25rem;
-    height: 2.25rem;
-    border-radius: 50%;
-    background-color: var(--accent-color);
-    color: var(--accent-text-color);
+    display: inline-block;
+    width: 3.2rem;
+    height: 4.2rem;
     flex-shrink: 0;
-    font-size: 1rem;
+    background-color: var(--accent-color);
+    -webkit-mask-image: var(--solid-brand-logo-image);
+    -webkit-mask-repeat: no-repeat;
+    -webkit-mask-position: center;
+    -webkit-mask-size: contain;
+    mask-image: var(--solid-brand-logo-image);
+    mask-repeat: no-repeat;
+    mask-position: center;
+    mask-size: contain;
 }
 
 .ready-upgrade-intro-copy {
@@ -1505,8 +1508,34 @@ body {
     height: 2rem;
     border-radius: 50%;
     background-color: #e9f0e8;
-    color: var(--accent-color);
-    font-size: 0.95rem;
+    overflow: hidden;
+}
+
+.ready-upgrade-contact-icon-image {
+    display: block;
+    width: 1.1rem;
+    height: 1.1rem;
+    object-fit: contain;
+}
+
+.ready-upgrade-contact-icon--phone .ready-upgrade-contact-icon-image {
+    width: 1.15rem;
+    height: 1.15rem;
+}
+
+.ready-upgrade-contact-icon--message .ready-upgrade-contact-icon-image {
+    width: 1.08rem;
+    height: 1.08rem;
+}
+
+.ready-upgrade-contact-icon--map .ready-upgrade-contact-icon-image {
+    width: 1.08rem;
+    height: 1.08rem;
+}
+
+.ready-upgrade-contact-icon--clock .ready-upgrade-contact-icon-image {
+    width: 1.02rem;
+    height: 1.02rem;
 }
 
 .ready-upgrade-contact-text {
@@ -1560,6 +1589,10 @@ body {
     cursor: pointer;
 }
 
+.ready-upgrade-column:last-child .ready-upgrade-form {
+    margin-top: 2rem;
+}
+
 @media (max-width: 900px) {
     .ready-upgrade-top-row {
         display: flex;
@@ -1598,6 +1631,10 @@ body {
 
     .ready-upgrade-column {
         padding: 1.1rem 1rem;
+    }
+
+    .ready-upgrade-column:last-child .ready-upgrade-form {
+        margin-top: 0;
     }
 }
 
@@ -2366,11 +2403,8 @@ body {
     display: inline-flex;
     align-items: center;
     justify-content: center;
-    width: 1.85rem;
-    height: 1.85rem;
-    border-radius: 50%;
-    background-color: #ffffff;
     flex: 0 0 auto;
+    background-color: transparent;
 }
 
 .contact-hero-feature-icon img {
@@ -2792,16 +2826,6 @@ body {
     border: 0;
 }
 
-.contact-map-highlight {
-    position: absolute;
-    inset: 24% 28% 24% 34%;
-    border: 0.35rem solid rgba(118, 122, 118, 0.56);
-    border-radius: 50%;
-    background-color: rgba(156, 161, 156, 0.08);
-    box-shadow: 0 0 0 1rem rgba(156, 161, 156, 0.08);
-    pointer-events: none;
-}
-
 .contact-map-content {
     display: flex;
     flex-direction: column;
@@ -2843,10 +2867,6 @@ body {
 
     .contact-map-content {
         padding: 1rem 1.25rem 1.5rem;
-    }
-
-    .contact-map-highlight {
-        inset: 26% 30% 26% 32%;
     }
 }
 
