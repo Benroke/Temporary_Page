@@ -2404,7 +2404,10 @@ body {
     align-items: center;
     justify-content: center;
     flex: 0 0 auto;
-    background-color: transparent;
+    width: 1.85rem;
+    height: 1.85rem;
+    border-radius: 50%;
+    background-color: #ffffff;
 }
 
 .contact-hero-feature-icon img {
@@ -2808,7 +2811,7 @@ body {
     grid-template-columns: minmax(0, 1.55fr) minmax(18rem, 0.95fr);
     align-items: start;
     max-width: 78rem;
-    margin: 0 auto;
+    margin: 1rem auto;
     background-color: var(--bg-color);
 }
 
